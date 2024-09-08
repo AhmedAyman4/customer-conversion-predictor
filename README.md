@@ -10,16 +10,17 @@ The goal is to create a model that can accurately predict which customers are mo
 * **Campaign Evaluation:** Assessing the performance of different marketing campaigns can help businesses identify what works and what doesn't.
 
 ## Exploratory Data Analysis (EDA):
-![image](https://github.com/user-attachments/assets/40faf0c7-ab20-4e1a-a578-e2d27aa46889)
-![image](https://github.com/user-attachments/assets/0b910d42-ff04-45ef-a875-1215bbfed0d5)
+![image](https://github.com/user-attachments/assets/4ebbcb1c-2123-4693-901d-916c671573e7)
+![image](https://github.com/user-attachments/assets/4549d64b-2795-4675-a58a-daca395c6cfd)
 
-![image](https://github.com/user-attachments/assets/5a8f1f9a-37c8-49e4-98f6-799244ffa67d)
+![image](https://github.com/user-attachments/assets/0b158e10-f1d2-4a16-8aff-df3780cc7645)
+
 ## Insights from the Correlation Matrix
 
 **Strong Positive Correlations with Conversion:**
 
 * **AdSpend:** There is a strong positive correlation between AdSpend and Conversion, suggesting that increased advertising expenditure is associated with higher conversion rates.
-* **Click Through Rate (CTR):** A moderately strong positive correlation exists between CTR and Conversion, indicating that a higher click-through rate is linked to a higher likelihood of conversion.
+* **Click-Through Rate (CTR):** A moderately strong positive correlation exists between CTR and Conversion, indicating that a higher click-through rate is linked to a higher likelihood of conversion.
 * **Website Visits:** There is a moderately strong positive correlation between Website Visits and Conversion, suggesting that more website visits are associated with higher conversion rates.
 * **Pages Per Visit:** A moderately strong positive correlation between Pages Per Visit and Conversion indicates that visitors who explore more pages are more likely to convert.
 * **TimeOnSite:** A moderately strong positive correlation between TimeOnSite and Conversion suggests that visitors who spend more time on the website are more likely to convert.
@@ -53,7 +54,8 @@ A crucial step after data preparation is model training. This involves splitting
 | GradientBoostingClassifier  | 0.94328125        | 0.91             |
 
  ## ROC Curve Models
- ![image](https://github.com/user-attachments/assets/e699a05c-138a-48d1-ae63-06933674a591)
+ ![image](https://github.com/user-attachments/assets/d7242648-71a1-4d3a-ba78-479e8fa443c7)
+
 
 The provided ROC curve plot compares the performance of seven different classification models: GaussianNB, DecisionTreeClassifier, RandomForestClassifier, LogisticRegression, AdaBoostClassifier, KNeighborsClassifier, and GradientBoostingClassifier. 
 
@@ -61,7 +63,7 @@ Here are some insights from the graph:
 
 **Model Performance:**
 
-- **GradientBoostingClassifier** and **RandomForestClassifier** exhibit the best overall performance, with AUC scores of 0.82 and 0.81, respectively. This indicates that these models are able to effectively discriminate between positive and negative classes.
+- **GradientBoostingClassifier** and **RandomForestClassifier** exhibit the best overall performance, with AUC scores of 0.82 and 0.81, respectively. This indicates that these models are able to discriminate between positive and negative classes effectively.
 - **KNeighborsClassifier** has the worst performance with an AUC score of 0.55, suggesting it struggles to distinguish between the classes.
 - **LogisticRegression** and **GaussianNB** have moderate performance, with AUC scores around 0.70.
 
@@ -89,7 +91,8 @@ Based on the provided metrics, **Model 3: RandomForestClassifier** appears to be
 
 The confusion matrix for Model 3 also shows a good balance between true positives and false positives/negatives:
 
-![image](https://github.com/user-attachments/assets/3951c708-8f4d-406d-a2ea-cbad90210623)
+![image](https://github.com/user-attachments/assets/695ae24d-09a4-4dd7-862f-27782fa1712d)
+
 
 
 - True Positives: 1396
