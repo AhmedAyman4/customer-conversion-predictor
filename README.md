@@ -1,97 +1,109 @@
-# Customer Conversion Prediction Project
+Digital Marketing Conversion Predictor
+This project develops a machine learning model to predict customer conversion likelihood in digital marketing campaigns. It includes a Jupyter Notebook for data analysis and model training, along with a Gradio-based web application for interactive predictions.
+Project Overview
+The goal is to predict which customers are likely to convert based on demographic, campaign, and engagement data. The model helps optimize marketing strategies by:
 
-## Project Overview
+Identifying high-potential customers for targeted advertising
+Enabling personalized campaign design
+Supporting customer segmentation
+Evaluating campaign performance
 
-This project develops a predictive machine learning model to forecast customer conversion rates for digital marketing campaigns. By leveraging advanced data analysis and machine learning techniques, the project aims to help businesses optimize their marketing strategies and improve conversion efficiency.
+The dataset, provided by Rabie El Kharoua under CC BY 4.0, includes features like age, income, ad spend, click-through rate, and more, with a binary conversion target.
+Repository Structure
 
-## Business Problem
+Predict_Conversion_in_Digital_Marketing.ipynb: Jupyter Notebook containing:
+Exploratory Data Analysis (EDA)
+Model training and evaluation using multiple algorithms (Random Forest, Gradient Boosting, etc.)
+Model saving (rf_model.pkl for Random Forest)
 
-The primary goal is to create a model that can accurately predict which customers are most likely to convert after engaging with digital marketing campaigns. This enables businesses to:
 
-- Implement targeted advertising
-- Design personalized marketing campaigns
-- Segment customers effectively
-- Evaluate marketing campaign performance
+app.py: Python script for the Gradio web application, allowing users to input customer and campaign data to predict conversion probability.
+rf_model.pkl: Pre-trained Random Forest model (second-best performer).
+README.md: This file, providing project overview and instructions.
 
-## Key Insights
+Installation
 
-### Correlation Analysis
+Clone the Repository:
+git clone https://github.com/your-username/digital-marketing-conversion-predictor.git
+cd digital-marketing-conversion-predictor
 
-#### Factors Positively Correlated with Conversion
-- Ad Spend
-- Click-Through Rate (CTR)
-- Website Visits
-- Pages Per Visit
-- Time on Site
 
-#### Factors with Weak or Negligible Correlation
-- Previous Purchases
-- Age
-- Income
-- Loyalty Points
+Set Up a Virtual Environment (recommended):
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-## Model Performance
 
-### Model Comparison
+Install Dependencies:Ensure you have Python 3.8+ installed, then run:
+pip install -r requirements.txt
 
-We evaluated seven different machine learning models:
+If requirements.txt is not provided, install the following:
+pip install gradio pandas numpy joblib scikit-learn matplotlib seaborn
 
-| Model | Training Accuracy | Testing Accuracy |
-|-------|-------------------|------------------|
-| GaussianNB | 0.88109 | 0.87875 |
-| DecisionTreeClassifier | 1.0 | 0.83688 |
-| RandomForestClassifier | 1.0 | 0.88813 |
-| LogisticRegression | 0.87656 | 0.87688 |
-| AdaBoostClassifier | 0.91594 | 0.90625 |
-| KNeighborsClassifier | 0.87766 | 0.87625 |
-| GradientBoostingClassifier | 0.94328 | 0.91000 |
 
-### Recommended Model: RandomForestClassifier
+Download the Dataset:Place the digital_marketing_campaign_dataset.csv file in the project directory. The dataset is available from the original source (cite Rabie El Kharoua, CC BY 4.0).
 
-**Performance Metrics:**
-- F1 Score: 0.9391
-- Recall: 0.9957
-- Precision: 0.8886
 
-### Confusion Matrix Breakdown
-- True Positives: 1,396
-- False Positives: 175
-- True Negatives: 23
-- False Negatives: 6
+Usage
+Running the Jupyter Notebook
 
-## Key Visualizations
+Launch Jupyter Notebook:jupyter notebook
 
-The project includes several key visualizations:
-- Correlation Matrix
-- ROC Curve Comparing Model Performances
-- Confusion Matrix for Best-Performing Model
 
-## Recommendations
+Open Predict_Conversion_in_Digital_Marketing.ipynb and run the cells to:
+Perform EDA
+Train and evaluate models
+Save the trained models (rf_model.pkl and gb_model.pkl)
 
-1. Use the RandomForestClassifier for predicting customer conversions
-2. Focus marketing efforts on:
-   - Increasing website engagement
-   - Optimizing ad spend
-   - Improving click-through rates
-3. Develop personalized strategies based on website interaction metrics
 
-## Future Work
 
-- Continuously retrain the model with new data
-- Explore additional features that might improve prediction accuracy
-- Implement A/B testing of marketing strategies based on model insights
+Running the Gradio Web App
 
-## Technologies Used
+Ensure rf_model.pkl is in the project directory.
+Run the Gradio app:python app.py
 
-- Python
-- Scikit-learn
-- Pandas
-- Matplotlib
-- Machine Learning Algorithms
 
-## Getting Started
+Open the provided URL (e.g., http://127.0.0.1:7860) in your browser.
+Input customer and campaign details via sliders and radio buttons to get conversion predictions.
 
-1. Clone the repository
-2. Install required dependencies
-3. Run the Jupyter notebook for detailed analysis
-4. Use the trained RandomForestClassifier for predictions
+Model Details
+
+Data Preprocessing:
+Categorical variables (Gender, CampaignType, CampaignChannel) are one-hot encoded.
+Numerical features are used as-is.
+
+
+Model Selection:
+Multiple models were evaluated (Decision Tree, Random Forest, Gradient Boosting, etc.).
+Gradient Boosting performed best (F1 Score: 0.951), but Random Forest was chosen for the app due to its balance of performance and speed.
+
+
+Features Used:
+Demographic: Age, Income, Gender
+Campaign: AdSpend, CampaignType, CampaignChannel
+Engagement: ClickThroughRate, ConversionRate, WebsiteVisits, PagesPerVisit, TimeOnSite, SocialShares, EmailOpens, EmailClicks
+Historical: PreviousPurchases, LoyaltyPoints
+
+
+
+Results
+The Random Forest model (rf_model.pkl) provides reliable predictions with:
+
+High precision and recall for identifying converters
+Probability outputs for nuanced decision-making
+
+The Gradio app offers an intuitive interface for real-time predictions, displaying whether a customer will convert and the associated probability.
+Dataset Attribution
+The dataset is provided by Rabie El Kharoua under the CC BY 4.0 license. Please cite the author when using the dataset. Duplication within Kaggle is not permitted.
+Contributing
+Contributions are welcome! To contribute:
+
+Fork the repository.
+Create a new branch (git checkout -b feature/your-feature).
+Make changes and commit (git commit -m "Add your feature").
+Push to the branch (git push origin feature/your-feature).
+Open a Pull Request.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details. The dataset is under CC BY 4.0, requiring attribution to Rabie El Kharoua.
+Contact
+For questions or feedback, please open an issue on GitHub or contact [ahmedalhofy42@gmail.com].
