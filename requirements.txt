@@ -3,3 +3,6 @@ numpy==2.1.1
 pandas==2.2.2
 scikit_learn==1.5.1
 seaborn==0.13.2
+gradio==4.19.2
+joblib==1.3.2
+warnings==0.3.0
