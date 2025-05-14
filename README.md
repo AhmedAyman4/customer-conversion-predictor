@@ -10,7 +10,7 @@ The goal is to predict which customers are likely to convert based on demographi
 - Supporting customer segmentation
 - Evaluating campaign performance
 
-The dataset, provided by Rabie El Kharoua under CC BY 4.0, includes features like age, income, ad spend, click-through rate, and more, with a binary conversion target.
+The dataset, provided by Kaggle under CC BY 4.0, includes features like age, income, ad spend, click-through rate, and more, with a binary conversion target.
 
 ## Repository Structure
 
