@@ -5,6 +5,8 @@
 ### Overview
 This dataset provides a comprehensive view of customer interactions with digital marketing campaigns. It includes demographic data, marketing-specific metrics, customer engagement indicators, and historical purchase data, making it suitable for predictive modeling and analytics in the digital marketing domain.
 
+- https://www.kaggle.com/datasets/rabieelkharoua/predict-conversion-in-digital-marketing-dataset
+
 ### Features
 
 #### Demographic Information
